@@ -13,13 +13,13 @@ public class hm_3 {
     }
          
         public static int nextInt(){
-            System.out.println("Введите число:");
+            System.out.println("Ведите число");
             int operand;
             if(scanner.hasNextInt()){
                 operand = scanner.nextInt();
             } else {
                 System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
-                scanner.next();//рекурсия
+                scanner.next();
                 operand = nextInt();
             }
             return operand;
@@ -32,7 +32,7 @@ public class hm_3 {
                 operation = scanner.next().charAt(0);
             } else {
                 System.out.println("Вы допустили ошибку при вводе операции. Попробуйте еще раз.");
-                scanner.next();//рекурсия
+                scanner.next();
                 operation = getOperation();
             }
             return operation;
@@ -55,7 +55,7 @@ public class hm_3 {
                     break;
                 default:
                     System.out.println("Операция не распознана. Повторите ввод.");
-                    result = calc(operand1, operand2, getOperation());//рекурсия
+                    result = calc(operand1, operand2, getOperation());
             }
             return result;
         }   
